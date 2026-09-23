@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+  <style>
+    :root {
+      --bg-color: #0d0f12;
+      --card-bg: #161a22;
+      --accent: #e5a93c; /* Libra Warm Gold */
+      --text: #f0f3f8;
+      --subtext: #8b949e;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px;
+      background: var(--card-bg);
+      border-radius: 20px;
+      padding: 28px 24px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+      border: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+    }
+
+    .libra-badge {
+      display: inline-block;
+      background: rgba(229, 169, 60, 0.15);
+      color: var(--accent);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(229, 169, 60, 0.3);
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: var(--subtext);
+      font-size: 0.9rem;
+      margin-bottom: 24px;
+    }
+
+    .card-box {
+      background: rgba(255,255,255,0.03);
+      border: 1px dashed rgba(229, 169, 60, 0.4);
+      border-radius: 14px;
+      padding: 18px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .card-box:hover {
+      background: rgba(229, 169, 60, 0.05);
+      border-color: var(--accent);
+    }
+
+    .card-hint {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .card-content {
+      display: none;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #d1d5db;
+      text-align: left;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="libra-badge">♎ Libra Season</div>
+  
+  <!-- GANTI NAMA PANGGILAN DIA DI SINI -->
+  <h1>Happy Birthday, Syakira Mazida Aulia Caesa! ✨</h1>
+  <p class="subtitle">A little birthday note for you.</p>
+
+  <div class="card-box" onclick="toggleCard()">
+    <div class="card-hint">✉️ Pencet ini dwong🥰</div>
+    <div class="card-content" id="card-text">
+      Selamat ulang tahun ya! <br><br>
+      Semoga di usia yang baru ini, segalanya makin berjalan lancar buat kamu. Tetap jadi orang yang menyenangkan, tenang, dan selalu bawa vibes positif. <br><br>
+      Seneng bisa kenal sama kamu sejauh ini. Semoga semua hal baik yang lagi kamu usahakan perlahan terwujud satu per satu. Enjoy your special day! 🎉
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleCard() {
+    const content = document.getElementById('card-text');
+    if (content.style.display === 'block') {
+      content.style.display = 'none';
+    } else {
+      content.style.display = 'block';
+    }
+  }
+</script>
+
+</body>
+</html>
